@@ -42,7 +42,7 @@ if(QZXING_USE_ENCODER)
     add_definitions(-DENABLE_ENCODER_GENERIC -DENABLE_ENCODER_QR_CODE)
 endif(QZXING_USE_ENCODER)
 
-add_library(qzxing "" ${SOURCES})
+add_library(qzxing SHARED "" ${SOURCES})
 
 if(WIN32)
     add_subdirectory(zxing/win32)
